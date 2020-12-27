@@ -70,7 +70,7 @@ async def run():
         await session.close()
 
 if __name__ == '__main__':
-    # Create and gracefully shut down the asyncio event loop.
+    # Create, start and gracefully shut down the asyncio event loop.
     loop = asyncio.new_event_loop()
     asyncio.set_event_loop(loop)
     try:
