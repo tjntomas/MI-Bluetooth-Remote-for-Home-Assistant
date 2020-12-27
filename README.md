@@ -12,12 +12,12 @@ To use the script, you need to:
 4. Fill in the name of the path to your remote control device in the python script, i.e. "/dev/input/event9"
 5. Add the details for your Home Assistant instance in the script.
 
-In total, you will ned to edti the following lines in the script:
+In total, you will need to edit the following lines in the script:
 ````python
-- BASE_API      = "http://192.168.1.20:8123/api/"  # URL to your HA instance.
-- DEV_INPUT     = "/dev/input/event9"             
-- API_KEY       = "A valid HA long-lived access token"
-- HA_EVENT_NAME = "mi_bt_remote" # Arbitrary name of the event that will get fired.
+BASE_API      = "http://192.168.1.20:8123/api/"  # URL to your HA instance.
+DEV_INPUT     = "/dev/input/event9"             
+API_KEY       = "A valid HA long-lived access token"
+HA_EVENT_NAME = "mi_bt_remote" # Arbitrary name of the event that will get fired.
 ````
 
 Then run the script with sudo python3 bt_remote_event.py to see that it works. Sudo is necessary to access the input device. Then, in Home Assistant, you can subscribe to the mi_bt_remote event in developer tools.
