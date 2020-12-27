@@ -1,5 +1,5 @@
 # MI-Bluetooth-Remote-for-Home-Assistant
-Use a bluetooth remote control connected to a linux device with Home Assistant
+# Use a bluetooth remote control connected to a linux device with Home Assistant
 
 I wanted to be able to use a spare Xiomi MI Remote control and get the keypresses as events into Home Assistant so I can use it as general purpose remote. The remote I used can be bought for around $12 on banggood.com or wish.com.  https://www.wish.com/product/5f9a27f4f2a9e4083c908f7b?share=web
 
