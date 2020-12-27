@@ -8,14 +8,17 @@ I paired the remote with a NUC running Ubuntu that I use as a media player. I th
 To use the script, you need to:
 1. Look in /dev/input and make a note of the highest numbered device
 2. Pair the remote control to the computer, as you would pair any bluetooth device.
-3. Look again in /dev/input and make note of the new devices that has been created. This is your bluetooth remote.
+3. Look again in /dev/input and make note of the new device that has been created. This is your bluetooth remote.
 4. Fill in the name of the path to your remote control device in the python script, i.e. "/dev/input/event9"
 5. Add the details for your Home Assistant instance in the script.
 
 In total, you will ned to edti the following lines in the script:
 ````python
 - BASE_API      = "http://192.168.1.20:8123/api/"  # URL to your HA instance.
-- DEV_INPUT     = "/dev/input/event16"             
+- DEV_INPUT     = "/dev/input/event9"             
 - API_KEY       = "A valid HA long-lived access token"
 - HA_EVENT_NAME = "mi_bt_remote" # Arbitrary name of the event that will get fired.
 ````
+
+
+You can then use the events as triggers in automations in Home Assistant.
