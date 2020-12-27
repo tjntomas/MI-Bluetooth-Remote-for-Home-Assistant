@@ -20,7 +20,11 @@ API_KEY       = "A valid HA long-lived access token"
 HA_EVENT_NAME = "mi_bt_remote" # Arbitrary name of the event that will get fired.
 ````
 
-Then run the script with sudo python3 bt_remote_event.py to see that it works. Sudo is necessary to access the input device. Then, in Home Assistant, you can subscribe to the mi_bt_remote event in developer tools.
+Then run the script with 
+````python
+sudo python3 bt_remote_event.py
+````
+to see that it works. Sudo is necessary to access the input device. Then, in Home Assistant, you can subscribe to the mi_bt_remote event in developer tools.
 
 Now, set up the script as a daemon by copying the btmon.service file to your service directory. You need to edit the path to the pytthon script in the service file. Enable the service and start it. The daemon need to be run as user root.
 
