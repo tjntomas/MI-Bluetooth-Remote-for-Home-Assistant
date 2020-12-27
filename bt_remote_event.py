@@ -60,7 +60,7 @@ async def run():
       # hold
       cmd_type =str(evdev.categorize(event)).split(",")[2]
 
-      # Compose the payload to send to HA along when firing the event.
+      # Compose the payload to send to HA when firing the event.
       payload = {CMD: cmd, CMD_TYPE: cmd_type}
 
       # Since the evdev library is async-based, we use async to send the event to HA.
