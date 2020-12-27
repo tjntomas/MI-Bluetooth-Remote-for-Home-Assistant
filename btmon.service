@@ -1,0 +1,12 @@
+[Unit]
+Description=Listem for MI Bluetooth Remote and send to HA
+
+[Service]
+Type=simple
+User=root
+ExecStart=/usr/bin/python3  /home/your_user_name/py/bt_remote_event.py
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target
