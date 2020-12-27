@@ -5,7 +5,7 @@ I wanted to be able to use a spare Xiaomi MI Remote control and get the keypress
 I paired the remote control with a NUC running Ubuntu that I use as a media player, but a Raspberry Pi or any other maching running a linux OS should work. I then wrote a simple python3 script to listen to the remote keypress events and send the events to Home Assistant.
 
 To use the script, you need to:
-1. Install the dependencies in the script. They should all be present on your system with the exception of the evdev module hhich you can find here. https://pypi.org/project/evdev/
+1. Install the dependencies in the script. They should all be present on your system with the exception of the evdev module which you can find here. https://pypi.org/project/evdev/
 1. Look in /dev/input and make a note of the highest numbered device
 2. Pair the remote control to the computer, as you would pair any bluetooth device.
 3. Look again in /dev/input and make note of the new device that has been created. This is your bluetooth remote control.
