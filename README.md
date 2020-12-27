@@ -3,9 +3,10 @@ Use a bluetooth remote control connected to a linux device with Home Assistant
 
 I wanted to be able to use a spare Xiomi MI Remote control and get the keypresses as events into Home Assistant so I can use it as general purpose remote. The remote I used can be bought for around $12 on banggood.com or wish.com.  https://www.wish.com/product/5f9a27f4f2a9e4083c908f7b?share=web
 
-I paired the remote control with a NUC running Ubuntu that I use as a media player. I then wrote a simple python script to listen to the remote keypress events and send the events to Home Assistant.
+I paired the remote control with a NUC running Ubuntu that I use as a media player. I then wrote a simple python3 script to listen to the remote keypress events and send the events to Home Assistant.
 
 To use the script, you need to:
+1. Install the dependencies in the script. They should all be present on your system with the expection of the evdev module hhich you can find here. https://pypi.org/project/evdev/
 1. Look in /dev/input and make a note of the highest numbered device
 2. Pair the remote control to the computer, as you would pair any bluetooth device.
 3. Look again in /dev/input and make note of the new device that has been created. This is your bluetooth remote control.
@@ -20,5 +21,8 @@ In total, you will ned to edti the following lines in the script:
 - HA_EVENT_NAME = "mi_bt_remote" # Arbitrary name of the event that will get fired.
 ````
 
+Then run the script with sudo python3 bt_remote_event.py to see that it works. Sudo is necessary to access the input device. Then, in Home Assistant, you can subscribe to the mi_bt_remote event in developer tools.
 
-You can then use the events as triggers in automations in Home Assistant.
+Now, set up the script as a daemon by copying the btmon.service file to your service directory, enable the service and start it. The daemon need to be run as user root.
+
+You can now use the events as triggers in automations in Home Assistant.
