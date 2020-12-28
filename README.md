@@ -2,6 +2,8 @@
 
 I wanted to be able to use a spare Xiaomi MI Remote control and get the keypresses as events into Home Assistant so I can use it as general purpose remote. The remote I used can be bought for around $12 on banggood.com or wish.com.  https://www.wish.com/product/5f9a27f4f2a9e4083c908f7b?share=web
 
+![MM](/miremote.jpg)
+
 I paired the remote control with a NUC running Ubuntu that I use as a media player, but a Raspberry Pi or any other maching running a linux OS should work. I then wrote a simple python3 script to listen to the remote keypress events and send the events to Home Assistant.
 
 To use the script, you need to:
