@@ -11,7 +11,7 @@ import aiohttp
 import logging
 import os
 
-# Setup logging and log levels.
+# Set up logging and log levels.
 logging.basicConfig(level=os.environ.get("LOGLEVEL", "INFO"))
 logging.getLogger('asyncio').setLevel(logging.CRITICAL)
 
