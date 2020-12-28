@@ -2,6 +2,8 @@
 Script to listen to events from a bluetooth remote control and send
 the events to Home Assistant.
 
+Author: Tomas Jansson, https://github.com/tjntomas
+
 """
 
 import json
