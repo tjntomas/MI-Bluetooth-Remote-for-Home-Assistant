@@ -15,7 +15,6 @@ import os
 logging.basicConfig(level=os.environ.get("LOGLEVEL", "INFO"))
 logging.getLogger('asyncio').setLevel(logging.CRITICAL)
 
-# Get parameters from the parameters.yaml.
 BASE_API      = "http://192.168.1.20:8123/api/"  # URL to your HA instance.
 DEV_INPUT     = "/dev/input/event16"             
 API_KEY       = "A valid HA long-lived access token"
