@@ -8,10 +8,10 @@ I paired the remote control with a NUC running Ubuntu that I use as a media play
 
 To use the script, you need to:
 1. Install the dependencies in the script. They should all be present on your system with the exception of the evdev module which you can find here. https://pypi.org/project/evdev/
-1. Look in /dev/input and make a note of the highest numbered device
+1. Look in `/dev/input` and make a note of the highest numbered device
 2. Pair the remote control to the computer, as you would pair any bluetooth device.
-3. Look again in /dev/input and make note of the new device that has been created. This is your bluetooth remote control.
-4. Fill in the name of the path to your remote control device in the python script, i.e. "/dev/input/event9"
+3. Look again in `/dev/input` and make note of the new device that has been created. This is your bluetooth remote control.
+4. Fill in the name of the path to your remote control device in the python script, i.e. `/dev/input/event9`
 5. Add the details for your Home Assistant instance in the script.
 
 In total, you will need to edit the following lines in the script:
@@ -28,6 +28,6 @@ sudo python3 bt_remote_event.py
 ````
 to see that it works. Sudo is necessary to access the input device. Then, in Home Assistant, you can subscribe to the mi_bt_remote event in developer tools.
 
-Now, set up the script as a daemon by copying the btmon.service file to your service directory. You need to edit the path to the pytthon script in the service file. Enable the service and start it. The daemon need to be run as user root.
+Now, set up the script as a daemon by copying the `btmon.service` file to your service directory. You need to edit the path to the pytthon script in the service file. Enable the service and start it. The daemon need to be run as user root.
 
 You can now use the events as triggers in automations in Home Assistant.
