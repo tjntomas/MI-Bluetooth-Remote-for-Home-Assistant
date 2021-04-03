@@ -21,6 +21,7 @@ BASE_API      = "http://192.168.1.20:8123/api/"  # URL to your HA instance.
 DEV_INPUT     = "/dev/input/event16"             
 API_KEY       = "A valid HA long-lived access token"
 HA_EVENT_NAME = "mi_bt_remote" # Arbitrary name of the event that will get fired.
+GRAB_DEVICE   = True # If set to True, the devices will be locked to this script and the system will not receive any events.
 
 EVENT_PATH    = "events/" + HA_EVENT_NAME
 BASE_API_URL  = BASE_API + EVENT_PATH
@@ -33,6 +34,9 @@ EVENT_LOG_TEMPLATE = "Fired event {} with event data{}"
 async def run():
   device = evdev.InputDevice(DEV_INPUT)
   print("Using Bluetooth", str(device))
+  
+  if GRAB_DEVICE:
+    device.grab()
 
   # Listen for events from the remote through the async-based evdev library.
   for event in device.read_loop():
