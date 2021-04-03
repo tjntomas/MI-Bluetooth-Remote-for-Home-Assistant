@@ -1,5 +1,5 @@
 [Unit]
-Description=Listem for MI Bluetooth Remote and send to HA
+Description=Listen for MI Bluetooth Remote events and send to HA
 
 [Service]
 Type=simple
