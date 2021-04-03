@@ -20,6 +20,8 @@ BASE_API      = "http://192.168.1.20:8123/api/"  # URL to your HA instance.
 DEV_INPUT     = "/dev/input/event9"             
 API_KEY       = "A valid HA long-lived access token"
 HA_EVENT_NAME = "mi_bt_remote" # Arbitrary name of the event that will get fired.
+GRAB_DEVICE   = False  # Set to True to lock the device to this script. The system will not receive any events from the device.
+                       # i.e, the remote will not work as a volume control by default.
 ````
 
 Then run the script with 
