@@ -4,7 +4,7 @@ Description=Listen for MI Bluetooth Remote events and send to HA
 [Service]
 Type=simple
 User=root
-ExecStart=/usr/bin/python3  /home/your_user_name/py/bt_remote_event.py
+ExecStart=/usr/bin/python3  /path_to_your_script/bt_remote_event.py
 Restart=always
 RestartSec=3
 
