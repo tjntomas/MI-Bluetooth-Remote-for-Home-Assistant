@@ -3,10 +3,10 @@
 NOTE: There is a dockerized version here that might suit some persons better. [Docker version of bluetooth remote for HA](https://github.com/tjntomas/Send-blueotooth-remote-event-to-Home-Assistant)
 
 I wanted to be able to use a spare Xiaomi MI Remote control and get the keypresses as events into Home Assistant so I can use it as general purpose remote. The remote I used can be bought for around $12 on banggood.com or wish.com.  [Mi bluetooth remote](https://www.wish.com/product/5f9a27f4f2a9e4083c908f7b?share=web) 
+![MM](/miremote.jpg)
 
 The cheap WeChip G20S remotes will also work: [WeChip remote](https://www.amazon.es/WeChip-Control-remoto-Nvidia-Android/dp/B08XZJ2MJQ/ref=asc_df_B08XZJ2MJQ/?tag=googshopes-21&linkCode=df0&hvadid=469288960989&hvpos=&hvnetw=g&hvrand=8317823509956761770&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1005424&hvtargid=pla-1211951857610&psc=1) 
 
-![MM](/miremote.jpg)
 
 I paired the remote control with a NUC running Ubuntu that I use as a media player, but a Raspberry Pi or any other maching running a linux OS should work. I then wrote a simple python3 script to listen to the remote keypress events and send the events to Home Assistant.
 
