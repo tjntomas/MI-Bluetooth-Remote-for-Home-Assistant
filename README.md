@@ -2,7 +2,7 @@
 
 NOTES: 
 1. There is a dockerized version here that might suit some persons better. [Docker version of bluetooth remote for HA](https://github.com/tjntomas/Send-blueotooth-remote-event-to-Home-Assistant)
-2. Thank's to Quentin C, (https://github.com/beman38) who has cleaned up the async code and made some more improvements such as using mutiple remotes. 
+2. Thank's to Quentin C, (https://github.com/beman38) who has cleaned up the async code and made some more improvements such as using multiple remotes. 
 
 I wanted to be able to use a spare Xiaomi MI Remote control and get the keypresses as events into Home Assistant so I can use it as general purpose remote. The remote I used can be bought for around $12 on Amazon.
 
